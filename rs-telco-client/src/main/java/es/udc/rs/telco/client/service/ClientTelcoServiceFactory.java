@@ -15,7 +15,7 @@ public class ClientTelcoServiceFactory {
 		try {
 			String serviceClassName = ConfigurationParametersManager.getParameter(CLASS_NAME_PARAMETER);
 			Class serviceClass = Class.forName(serviceClassName);
-			return (ClientTelcoService) serviceClass.newInstance();
+			return (ClientTelcoService) serviceClass.getDeclaredConstructor().newInstance();
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
