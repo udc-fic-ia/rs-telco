@@ -1,16 +1,16 @@
 package es.udc.rs.telco.client.service.rest;
 
-import javax.ws.rs.client.Client;
-import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.client.WebTarget;
-import javax.ws.rs.core.MediaType;
+import jakarta.ws.rs.client.Client;
+import jakarta.ws.rs.client.ClientBuilder;
+import jakarta.ws.rs.client.WebTarget;
+import jakarta.ws.rs.core.MediaType;
 
 import es.udc.rs.telco.client.service.ClientTelcoService;
 import es.udc.ws.util.configuration.ConfigurationParametersManager;
 
 public abstract class RestClientTelcoService implements ClientTelcoService {
 
-	private static javax.ws.rs.client.Client client = null;
+	private static jakarta.ws.rs.client.Client client = null;
 
 	private final static String ENDPOINT_ADDRESS_PARAMETER = "RestClientTelcoService.endpointAddress";
 	private WebTarget endPointWebTarget = null;

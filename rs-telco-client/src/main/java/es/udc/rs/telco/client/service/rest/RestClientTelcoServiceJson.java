@@ -1,6 +1,6 @@
 package es.udc.rs.telco.client.service.rest;
 
-import javax.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.MediaType;
 
 public class RestClientTelcoServiceJson extends RestClientTelcoService {
 
