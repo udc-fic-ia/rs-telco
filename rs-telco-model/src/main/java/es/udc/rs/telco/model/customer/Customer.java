@@ -1,18 +1,18 @@
-package es.udc.rs.telco.model.client;
+package es.udc.rs.telco.model.customer;
 
-import java.util.Calendar;
+import java.time.LocalDateTime;
 
-public class Client {
+public class Customer {
 
-    private Long clientId;
+    private Long customerId;
     private String name;
     private String dni;
     private String address;
-    private Calendar creationDate;
+    private LocalDateTime creationDate;
     private String phoneNumber;
     
 
-	public Client(String name, String dni, String address, String phoneNumber) {
+	public Customer(String name, String dni, String address, String phoneNumber) {
 		super();
 		this.name = name;
 		this.dni = dni;
@@ -21,12 +21,12 @@ public class Client {
 	}
 
 
-	public Long getClientId() {
-		return clientId;
+	public Long getCustomerId() {
+		return customerId;
 	}
 
-	public void setClientId(Long clientId) {
-		this.clientId = clientId;
+	public void setCustomerId(Long customerId) {
+		this.customerId = customerId;
 	}
 
 	public String getName() {
@@ -53,11 +53,11 @@ public class Client {
 		this.address = address;
 	}
 
-	public Calendar getCreationDate() {
+	public LocalDateTime getCreationDate() {
 		return creationDate;
 	}
 
-	public void setCreationDate(Calendar creationDate) {
+	public void setCreationDate(LocalDateTime creationDate) {
 		this.creationDate = creationDate;
 	}
 
@@ -67,6 +67,18 @@ public class Client {
 
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
+	}
+
+	@Override
+	public String toString() {
+		return "Customer{" +
+				"customerId=" + customerId +
+				", name='" + name + '\'' +
+				", dni='" + dni + '\'' +
+				", address='" + address + '\'' +
+				", creationDate=" + creationDate +
+				", phoneNumber='" + phoneNumber + '\'' +
+				'}';
 	}
 
 }

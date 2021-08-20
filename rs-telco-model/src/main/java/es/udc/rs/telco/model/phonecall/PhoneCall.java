@@ -1,21 +1,21 @@
 package es.udc.rs.telco.model.phonecall;
 
-import java.util.Calendar;
+import java.time.LocalDateTime;
 
 public class PhoneCall {
 
     private Long phoneCallId;
-    private Long clientId;
-    private Calendar startDate;
+    private Long customerId;
+    private LocalDateTime startDate;
     private Long duration;
     private String destinationNumber;
     private PhoneCallType phoneCallType;
     private PhoneCallStatus phoneCallStatus;
     
-	public PhoneCall(Long clientId, Calendar startDate, Long duration, String destinationNumber,
+	public PhoneCall(Long clientId, LocalDateTime startDate, Long duration, String destinationNumber,
 			PhoneCallType phoneCallType) {
 		super();
-		this.clientId = clientId;
+		this.customerId = clientId;
 		this.startDate = startDate;
 		this.duration = duration;
 		this.destinationNumber = destinationNumber;
@@ -30,19 +30,19 @@ public class PhoneCall {
 		this.phoneCallId = phoneCallId;
 	}
 
-	public Long getClientId() {
-		return clientId;
+	public Long getCustomerId() {
+		return customerId;
 	}
 
-	public void setClientId(Long clientId) {
-		this.clientId = clientId;
+	public void setCustomerId(Long customerId) {
+		this.customerId = customerId;
 	}
 
-	public Calendar getStartDate() {
+	public LocalDateTime getStartDate() {
 		return startDate;
 	}
 
-	public void setStartDate(Calendar startDate) {
+	public void setStartDate(LocalDateTime startDate) {
 		this.startDate = startDate;
 	}
 
@@ -76,8 +76,18 @@ public class PhoneCall {
 
 	public void setPhoneCallStatus(PhoneCallStatus phoneCallStatus) {
 		this.phoneCallStatus = phoneCallStatus;
-	}	
+	}
 
-	
-    
+	@Override
+	public String toString() {
+		return "PhoneCall{" +
+				"phoneCallId=" + phoneCallId +
+				", customerId=" + customerId +
+				", startDate=" + startDate +
+				", duration=" + duration +
+				", destinationNumber='" + destinationNumber + '\'' +
+				", phoneCallType=" + phoneCallType +
+				", phoneCallStatus=" + phoneCallStatus +
+				'}';
+	}
 }
