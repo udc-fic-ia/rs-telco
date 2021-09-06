@@ -22,7 +22,7 @@
 ## Iteración 2
 ---------------------------------------------------------------------
 
-#### Partes opcionales incluidas y miembros del grupo que han participado
+### Partes opcionales incluidas y miembros del grupo que han participado
 - .
 
 ### Pruebas WS REST
