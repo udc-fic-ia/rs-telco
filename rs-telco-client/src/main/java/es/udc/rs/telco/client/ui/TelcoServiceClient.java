@@ -14,19 +14,19 @@ public class TelcoServiceClient {
 		if ("-addCustomer".equalsIgnoreCase(args[0])) {
 			validateArgs(args, 2, new int[] {});
 
-			// [-addCustomer] TelcoServiceClient -addClient <name> ...
+			// [-addCustomer] TelcoServiceClient -addCustomer <name> ...
 
 			try {
-				Long clientId = null; // Invoke method from the clientTelcoService
-				System.out.println("Client " + clientId + " " + "created sucessfully");
+				Long customerId = null; // Invoke method from the clientTelcoService
+				System.out.println("Customer " + customerId + " " + "created sucessfully");
 			} catch (Exception ex) {
 				ex.printStackTrace(System.err);
 			}
 
-		} else if ("-findClient".equalsIgnoreCase(args[0])) {
+		} else if ("-findCustomer".equalsIgnoreCase(args[0])) {
 			validateArgs(args, 2, new int[] { 1 });
 
-			// [-findClient] ClientTelcoServiceClient -findClient <clientId>
+			// [-findCustomer] ClientTelcoServiceClient -findCustomer <customerId>
 
 			try {
 				// ...
@@ -58,8 +58,8 @@ public class TelcoServiceClient {
 
 	public static void printUsage() {
 		System.err.println(
-				"Usage:\n" + "    [-addClient]    TelcoServiceClient -addClient <name> ...\n" +
-		                     "    [-findClient]   TelcoServiceClient -findClient <clientId>\n" +
+				"Usage:\n" + "    [-addCustomer]    TelcoServiceClient -addCustomer <name> ...\n" +
+		                     "    [-findCustomer]   TelcoServiceClient -findCustomer <customerId>\n" +
 						     "    ...\n");
 	}
 
