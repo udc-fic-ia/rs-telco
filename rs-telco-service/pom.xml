@@ -75,7 +75,7 @@
 					<dependency>
 						<groupId>jakarta.xml.bind</groupId>
 						<artifactId>jakarta.xml.bind-api</artifactId>
-						<version>${jaxb.version}</version>
+						<version>${jakarta.jaxb.version}</version>
 					</dependency>
 					<dependency>
 						<groupId>com.sun.xml.bind</groupId>
@@ -100,7 +100,7 @@
 					<dependency>
 						<groupId>jakarta.activation</groupId>
 						<artifactId>jakarta.activation-api</artifactId>
-						<version>${jakartaActivation.version}</version>
+						<version>${jakarta.activation.version}</version>
 					</dependency>
                 </dependencies>
             </plugin>
